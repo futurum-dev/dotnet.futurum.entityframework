@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>Futurum.EntityFramework</PackageId>
+        <PackageIcon>dotnet-logo.png</PackageIcon>
+        <Description>Small dotnet library allowing you to use EntityFramework with Futurum.Core</Description>
+        <PackageProjectUrl>https://www.futurum.dev/projects/dotnet-futurum.html</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/futurum-dev/dotnet.futurum.entityframework</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\assets\dotnet-logo.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Futurum.Core" Version="1.0.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+    </ItemGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DocumentationFile>bin\Debug\net6.0\Futurum.Core.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\Release\net6.0\Futurum.Core.xml</DocumentationFile>
+    </PropertyGroup>
+
+</Project>
